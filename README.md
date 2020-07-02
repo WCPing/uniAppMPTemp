@@ -1,4 +1,4 @@
-#funbean-gp-mini
+# uniapp mini program template
 
 ## Project setup
 ```
