@@ -6,15 +6,15 @@
 import CommonUtil from '@/utils/CommonUtil'
 
 const storagePlugin = (store) => {
-  var key = 'vuex'
+  const key = 'vuex'
   // 从缓存中读取
-  var storageState = uni.getStorageSync(key)
-  let initState = CommonUtil.copy(store.state)
+  const storageState = uni.getStorageSync(key)
+  const initState = CommonUtil.copy(store.state)
   Object.assign(initState, storageState)
   store.replaceState(initState)
 
   store.subscribe((mutation, state) => {
-    uni.setStorageSync(key, state);
+    uni.setStorageSync(key, state)
   })
 }
 

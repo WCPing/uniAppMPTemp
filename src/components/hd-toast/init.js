@@ -17,7 +17,7 @@ export default function init(v) {
         // 小程序导航条页面控制
         // #ifndef H5
         if (state.hideTabBar) {
-          wx.showTabBar();
+          wx.showTabBar()
         }
         // #endif
         state.show = false
@@ -25,18 +25,18 @@ export default function init(v) {
       showToast(state, data) {
         state = Object.assign(state, data)
         state.show = true
-        setTimeout(()=>{
+        setTimeout(() => {
           state.show = false
-        },state.duration)
+        }, state.duration)
       }
     }
   })
   // 注册$showLoading到Vue原型上，以方便全局调用
-  v.prototype.$showToast = function (option) {
+  v.prototype.$showToast = function(option) {
     if (typeof option === 'object') {
       // #ifndef H5
       if (option.hideTabBar) {
-        wx.hideTabBar();
+        wx.hideTabBar()
       }
       // #endif
       v.prototype.$toastStore.commit('showToast', option)
@@ -45,7 +45,7 @@ export default function init(v) {
     }
   }
 
-  v.prototype.$hideToast = function () {
+  v.prototype.$hideToast = function() {
     v.prototype.$toastStore.commit('hideToast')
   }
 }

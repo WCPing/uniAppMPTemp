@@ -1,8 +1,6 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component({
-  components: { }
+  components: {}
 })
-export default class Category extends Vue {
-
-}
+export default class Category extends Vue {}

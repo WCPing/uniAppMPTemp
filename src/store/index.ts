@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-interface */
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { Commit } from 'vuex'
@@ -5,8 +6,8 @@ import storagePlugin from './StoragePlugin'
 
 Vue.use(Vuex)
 
-export interface  State {
-
+export interface State {
+  //
 }
 
 const store = new Vuex.Store({

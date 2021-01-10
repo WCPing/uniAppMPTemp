@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "npm run dev:mp-weixin",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
@@ -26,7 +27,8 @@
     "dev:quickapp-light": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-light vue-cli-service uni-build --watch",
     "dev:quickapp-vue": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-vue vue-cli-service uni-build --watch",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
-    "serve:quickapp-vue": "node node_modules/@dcloudio/uni-quickapp-vue/bin/serve.js"
+    "serve:quickapp-vue": "node node_modules/@dcloudio/uni-quickapp-vue/bin/serve.js",
+    "lint": "vue-cli-service lint --fixed"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-26920200424005",
@@ -72,7 +74,15 @@
     "cross-env": "^7.0.2",
     "postcss-comment": "^2.0.0",
     "typescript": "^3.7.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-eslint": "^4.4.4",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2"
   },
   "browserslist": [
     "Android >= 4",
